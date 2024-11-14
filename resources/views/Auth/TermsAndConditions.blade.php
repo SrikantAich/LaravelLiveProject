@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
-    <link rel="icon" href="{{ asset('vendor/bladewind/images/logo.png') }}">
+    <link rel="icon" href="{{ asset('CSS/images/logo.png') }}">
     <title>Instacart - Terms and Conditions</title>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900">

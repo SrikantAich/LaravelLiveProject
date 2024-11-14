@@ -321,8 +321,9 @@ body {
 }
 
 #hero {
-  background: url(../assets/hero4.png);
-  height: 90vh;
+  background-image: url('./images/backdrop3.jpg');
+  opacity: 1;
+  height: 85vh;
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
@@ -355,8 +356,8 @@ body {
 
 #feature {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items:center;
+  justify-content:space-around;
   flex-wrap: wrap;
 }
 

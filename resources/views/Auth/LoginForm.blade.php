@@ -12,16 +12,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
-    <link rel="icon" href="{{ asset('vendor/bladewind/images/logo.png') }}">
+    <link rel="icon" href="{{ asset('CSS/images/logo.png') }}">
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center">
 
 <div class="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-6xl">
-    <div class="hidden bg-cover lg:block lg:w-3/5" style="background-image: url('{{ asset('vendor/bladewind/images/backdrop2.jpg') }}')"></div>
+    <div class="hidden bg-cover lg:block lg:w-3/5" style="background-image: url('{{ asset('CSS/images/backdrop2.jpg') }}')"></div>
 
     <div class="w-full px-6 py-8 md:px-8 lg:w-1/2">
         <div class="flex justify-center mx-auto">
-            <img class="w-auto h-24 sm:h-30" src="{{ asset('vendor/bladewind/images/logo.png')}}" alt="Logo">
+            <img class="w-auto h-24 sm:h-30" src="{{ asset('CSS/images/logo.png')}}" alt="Logo">
         </div>
 
         <p class="mt-3 text-xl text-center text-gray-600 dark:text-gray-200">Welcome back!</p>
