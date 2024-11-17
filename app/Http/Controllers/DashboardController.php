@@ -37,13 +37,13 @@ class DashboardController extends Controller
             $mail->isSMTP(); // Use SMTP
             $mail->Host = 'smtp.gmail.com'; // SMTP server
             $mail->SMTPAuth = true; // Enable authentication
-            $mail->Username = 'srikantaich01@gmail.com'; // Replace with your Gmail address
-            $mail->Password = 'kaioikluqiwfgjth'; // Replace with your Gmail app password
+            $mail->Username = 'email'; // Replace with your Gmail address
+            $mail->Password = 'password'; // Replace with your Gmail app password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
             $mail->Port = 587; // TCP port for TLS
 
             // Recipients
-            $mail->setFrom('srikantaich01@gmail.com', 'Instacart'); // Replace with your email and name
+            $mail->setFrom('email', 'name'); // Replace with your email and name
             $mail->addAddress($email); // Recipient's email
             // Optional CC/BCC
             // $mail->addCC('cc@example.com');
