@@ -91,4 +91,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Bootstrap for responsive design
 - Tailwind
 - Meraki UI
-- Open-Source Git Repo For Front-End
+- For Front-End `https://github.com/Rahul02M/Cara-online-shopping`
