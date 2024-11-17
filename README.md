@@ -2,6 +2,7 @@
 # FMCG Delivery E-Commerce Website
 
 ## Overview
+This project is a Laravel-based eCommerce website designed to deliver Fast-Moving Consumer Goods (FMCG) products within 6 hours. The platform allows users to browse, select, and purchase a variety of FMCG products from the comfort of their homes, ensuring quick and efficient delivery.
 ## Screen Shots
 ## Login Screen
 ![login](https://github.com/user-attachments/assets/448cff20-3d2c-4d97-921a-9d9e66190575)
@@ -18,7 +19,7 @@
 ## Final Order Placed
 ![Screenshot 2024-11-17 205513](https://github.com/user-attachments/assets/4f09d5d3-e944-4947-9671-a56fc9243769)
 
-This project is a Laravel-based eCommerce website designed to deliver Fast-Moving Consumer Goods (FMCG) products within 6 hours. The platform allows users to browse, select, and purchase a variety of FMCG products from the comfort of their homes, ensuring quick and efficient delivery.
+
 
 ## Features
 
