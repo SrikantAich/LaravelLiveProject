@@ -89,3 +89,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Laravel framework
 - Bootstrap for responsive design
+- Tailwind
+- Meraki UI
+- Open-Source Git Repo For Front-End
