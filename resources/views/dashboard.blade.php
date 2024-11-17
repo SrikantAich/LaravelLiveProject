@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('CSS/style.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <link rel="icon" href="{{ asset('CSS/images/logo.png') }}">
-    <title>Instacart </title>
+    <title>Instacart | Dashboard </title>
 
 </head>
 
@@ -24,12 +24,11 @@
         </a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="/index.html">Home</a></li>
-                <li><a href="./sub-pages/shop.html">Shop</a></li>
-                <li><a href="./sub-pages/blog.html">Sale</a></li>
-                <li><a href="./sub-pages/about.html">About</a></li>
-                <li><a href="./sub-pages/contact.html">Contact</a></li>
-                <li class="lg-bag"><a href="./sub-pages/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a class="active" href="{{route('dashboard')}}">Home</a></li>
+                <li><a href="{{route('shop')}}">Shop</a></li>
+                <li><a href="{{route('sale')}}">Sale</a></li>
+                <li><a href="{{route('contact')}}">Contact</a></li>
+                <li class="lg-bag"><a href="{{route('cart')}}"><i class="fa-solid fa-bag-shopping"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
 
                 <div class="userDropdown">
@@ -92,7 +91,7 @@
     
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Design</p>
+        {{-- <p>Summer Collection New Modern Design</p> --}}
         <div class="pro-container">
             @foreach (array_slice($products->all(), 0, 12) as $product)
                 <div class="pro">
@@ -113,7 +112,8 @@
                         </div>
                         <h4>₹{{ number_format($product->price, 2) }}</h4> <!-- Format price to 2 decimal places -->
                     </div>
-                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#" class="cart" data-product-id="{{ $product->id }}"><i class="fa-solid fa-cart-shopping"></i></a>
+
                 </div>
             @endforeach
         </div>
@@ -143,8 +143,8 @@
         <div class="col">
             <img src="{{ asset('CSS/images/logo.png') }}" class="w-20 h-20 logo" alt="logo">
             <h4>Contact</h4>
-            <p><strong>Address:</strong>562 Wellington Road, Street 32,san Freancisco</p>
-            <p><strong>Phone:</strong>+01 2222 3665 / (+91) 01 2345 6763</p>
+            <p><strong>Address:</strong>Bhadrak,Odisha-756115</p>
+            <p><strong>Phone:</strong>(+91) 01 2345 6763</p>
             <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
             <div class="follow">
                 <h4>Follow us</h4>
@@ -188,5 +188,30 @@
     </footer>
     <script src="./js/responsiveHome.js"></script>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).on('click', '.cart', function (e) {
+        e.preventDefault();
+
+        const productId = $(this).data('product-id'); // Ensure the button has a `data-product-id` attribute
+
+        $.ajax({
+            url: '{{ route("cart.add") }}', // Adjust to your route name
+            type: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}', // Include CSRF token
+                product_id: productId,
+            },
+            success: function (response) {
+                alert(response.message); // Notify the user
+                console.log(response.cart); // Optional: Log cart details
+            },
+            error: function (xhr) {
+                alert(xhr.responseJSON.error); // Handle errors
+            },
+        });
+});
+</script>
 
 </html>
