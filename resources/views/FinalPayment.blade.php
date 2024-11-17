@@ -42,7 +42,7 @@
         <div class="flex flex-col gap-2 min-[400px]:flex-row">
           <a
             class="flex-1 inline-flex items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50"
-            href="#"
+            href="{{route('dashboard)}}"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
