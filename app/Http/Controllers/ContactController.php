@@ -42,7 +42,7 @@ class ContactController extends Controller
             // Recipients
             $mail->setFrom('email', 'name');
             $mail->addAddress($data['email'], $data['name']); // Customer email
-            $mail->addAddress('srikantaich01@gmail.com', 'Instacart-Complaint');
+            $mail->addAddress('admin@email,com', 'Complaint');//create conversation between admin and client for complaint resolution
              // Admin email address
 
             // Content settings
@@ -79,7 +79,7 @@ class ContactController extends Controller
             // Send email to customer
             $mail->send();
 
-            // Step 4: Redirect back with success message
+            // Step 4: Redirect back with a success message
             return redirect()->back()->with('success', 'Your message has been sent successfully!');
 
         } catch (Exception $e) {
